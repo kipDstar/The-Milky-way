@@ -1,0 +1,15 @@
+# Node
+node_modules/
+# Python
+__pycache__/
+*.pyc
+.venv/
+# Flutter
+.build/
+.dart_tool/
+.pub-cache/
+# OS
+.DS_Store
+# Editor
+.idea/
+.vscode/

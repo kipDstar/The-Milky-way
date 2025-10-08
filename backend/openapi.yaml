@@ -1,0 +1,64 @@
+openapi: 3.0.3
+info:
+  title: DDCPTS API
+  version: 0.1.0
+paths:
+  /api/v1/auth/login:
+    post:
+      summary: Login
+      responses:
+        "200": { description: OK }
+  /api/v1/auth/otp-send:
+    post:
+      summary: Send OTP
+      responses:
+        "200": { description: OK }
+  /api/v1/auth/verify-otp:
+    post:
+      summary: Verify OTP
+      responses:
+        "200": { description: OK }
+  /api/v1/farmers:
+    post:
+      summary: Create farmer
+      responses:
+        "201": { description: Created }
+  /api/v1/farmers/{farmer_code}:
+    get:
+      summary: Get farmer
+      parameters:
+        - in: path
+          name: farmer_code
+          schema: { type: string }
+          required: true
+      responses:
+        "200": { description: OK }
+  /api/v1/deliveries:
+    get:
+      summary: List deliveries
+      responses:
+        "200": { description: OK }
+    post:
+      summary: Create delivery
+      responses:
+        "201": { description: Created }
+  /api/v1/reports/daily:
+    get:
+      summary: Daily report
+      responses:
+        "200": { description: OK }
+  /api/v1/reports/monthly:
+    get:
+      summary: Monthly report
+      responses:
+        "200": { description: OK }
+  /api/v1/payments/disburse:
+    post:
+      summary: Disburse payments
+      responses:
+        "202": { description: Accepted }
+  /api/v1/sync/batch:
+    post:
+      summary: Batch sync
+      responses:
+        "200": { description: OK }
